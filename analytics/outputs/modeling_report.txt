@@ -1,0 +1,45 @@
+TITANIC PREDICTIVE MODELING REPORT
+================================================================================
+
+1. TRAIN/TEST SPLIT
+A stratified 80/20 split was used so that the survived/not-survived class proportions observed in the cleaned dataset were preserved across the training and test sets.
+
+2. CLASSIFIER COMPARISON
+              Model  Accuracy  Precision  Recall     F1    AUC
+Logistic Regression    0.8045     0.7931  0.6667 0.7244 0.8437
+      Decision Tree    0.7654     0.7547  0.5797 0.6557 0.7971
+      Random Forest    0.8101     0.7966  0.6812 0.7344 0.8287
+Tuned Random Forest    0.8101     0.8182  0.6522 0.7258 0.8430
+
+3. IMBALANCE HANDLING
+             Strategy  Precision  Recall     F1
+             Baseline     0.7966  0.6812 0.7344
+Class Weight Balanced     0.7463  0.7246 0.7353
+                SMOTE     0.7727  0.7391 0.7556
+
+Conclusion:
+SMOTE achieved the highest F1 score of 0.7556. It was preferred because its balance between precision and recall was strongest among the tested strategies, while the baseline F1 was 0.7344.
+
+4. HYPERPARAMETER TUNING
+Best parameters: {'model__max_depth': 8, 'model__max_features': 'sqrt', 'model__n_estimators': 200}
+Best CV F1: 0.7402
+OOB score: 0.8230
+
+5. REGRESSION
+MAE: 20.8094
+RMSE: 30.4731
+R²: 0.3999
+Adjusted R²: 0.3679
+Breusch-Pagan p-value: 0.0001
+The residual analysis provides evidence of heteroscedasticity (Breusch-Pagan p-value=0.0001).
+
+6. FINAL MODEL COMPARISON
+              Model  Accuracy  Precision  Recall     F1    AUC     MAE    RMSE     R²  Adjusted R²
+Logistic Regression    0.8045     0.7931  0.6667 0.7244 0.8437     NaN     NaN    NaN          NaN
+      Decision Tree    0.7654     0.7547  0.5797 0.6557 0.7971     NaN     NaN    NaN          NaN
+      Random Forest    0.8101     0.7966  0.6812 0.7344 0.8287     NaN     NaN    NaN          NaN
+Tuned Random Forest    0.8101     0.8182  0.6522 0.7258 0.8430     NaN     NaN    NaN          NaN
+  Linear Regression       NaN        NaN     NaN    NaN    NaN 20.8094 30.4731 0.3999       0.3679
+
+7. FINAL RECOMMENDATION
+The selected classifier is Random Forest, based on the predefined selection rule of highest held-out F1, followed by AUC and accuracy. It achieved an F1 score of 0.7344, AUC of 0.8287, and accuracy of 0.8101. Its precision was 0.7966 and recall was 0.6812. The complete preprocessing and classification pipeline was saved and successfully reloaded for prediction on raw test inputs.
