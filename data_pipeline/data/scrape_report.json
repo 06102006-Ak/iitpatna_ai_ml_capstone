@@ -1,0 +1,33 @@
+{
+  "scrape_stats": {
+    "mode": "live",
+    "listing_pages_requested": null,
+    "book_links_seen": 104,
+    "unique_books": 104,
+    "detail_requests": 0,
+    "failed_detail_requests": 0,
+    "categories_requested": [
+      "Travel",
+      "Mystery",
+      "Historical Fiction",
+      "Poetry",
+      "Science Fiction"
+    ]
+  },
+  "cleaning": {
+    "input_rows": 104,
+    "output_rows": 104,
+    "dropped_rows": 0,
+    "numeric_imputations": {}
+  },
+  "fixed_gbp_to_inr": 105.5,
+  "final_rows": 104,
+  "categories": 5,
+  "category_counts": {
+    "Mystery": 32,
+    "Historical Fiction": 26,
+    "Poetry": 19,
+    "Science Fiction": 16,
+    "Travel": 11
+  }
+}

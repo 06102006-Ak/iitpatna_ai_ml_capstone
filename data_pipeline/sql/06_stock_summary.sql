@@ -1,0 +1,1 @@
+SELECT c.category_name, COUNT(*) AS book_count, SUM(b.in_stock) AS in_stock_count, ROUND(AVG(b.price_inr), 2) AS avg_price_inr FROM books b JOIN categories c ON b.category_id=c.category_id GROUP BY c.category_name ORDER BY avg_price_inr DESC;

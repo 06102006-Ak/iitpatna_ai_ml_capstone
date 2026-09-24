@@ -1,0 +1,125 @@
+{
+  "shape": [
+    889,
+    14
+  ],
+  "missing": {
+    "deck": 77.22,
+    "age": 19.87,
+    "embarked": 0.22,
+    "embark_town": 0.22
+  },
+  "outliers": {
+    "age": {
+      "lower": 2.5,
+      "upper": 54.5,
+      "outliers": 65
+    },
+    "fare": {
+      "lower": -26.7605,
+      "upper": 65.6563,
+      "outliers": 114
+    }
+  },
+  "story": {
+    "sex_survival_rate": {
+      "female": 0.7404,
+      "male": 0.1889
+    },
+    "pclass_survival_rate": {
+      "1": 0.6262,
+      "2": 0.4728,
+      "3": 0.2424
+    },
+    "sex_pclass_survival_rate": {
+      "female|1": 0.9674,
+      "female|2": 0.9211,
+      "female|3": 0.5,
+      "male|1": 0.3689,
+      "male|2": 0.1574,
+      "male|3": 0.1354
+    },
+    "correlation": {
+      "survived": {
+        "survived": 1.0,
+        "pclass": -0.3355,
+        "age": -0.0698,
+        "sibsp": -0.034,
+        "parch": 0.0832,
+        "fare": 0.2553
+      },
+      "pclass": {
+        "survived": -0.3355,
+        "pclass": 1.0,
+        "age": -0.3365,
+        "sibsp": 0.0817,
+        "parch": 0.0168,
+        "fare": -0.5482
+      },
+      "age": {
+        "survived": -0.0698,
+        "pclass": -0.3365,
+        "age": 1.0,
+        "sibsp": -0.2325,
+        "parch": -0.1715,
+        "fare": 0.0937
+      },
+      "sibsp": {
+        "survived": -0.034,
+        "pclass": 0.0817,
+        "age": -0.2325,
+        "sibsp": 1.0,
+        "parch": 0.4145,
+        "fare": 0.1609
+      },
+      "parch": {
+        "survived": 0.0832,
+        "pclass": 0.0168,
+        "age": -0.1715,
+        "sibsp": 0.4145,
+        "parch": 1.0,
+        "fare": 0.2175
+      },
+      "fare": {
+        "survived": 0.2553,
+        "pclass": -0.5482,
+        "age": 0.0937,
+        "sibsp": 0.1609,
+        "parch": 0.2175,
+        "fare": 1.0
+      }
+    },
+    "top_two_correlations": [
+      {
+        "pair": [
+          "pclass",
+          "fare"
+        ],
+        "r": -0.5481932852366449,
+        "abs_r": 0.5481932852366449
+      },
+      {
+        "pair": [
+          "sibsp",
+          "parch"
+        ],
+        "r": 0.4145416380997264,
+        "abs_r": 0.4145416380997264
+      }
+    ]
+  },
+  "standardization": {
+    "age": {
+      "before_mean": 29.315151856017994,
+      "before_std": 12.984932293690775,
+      "after_mean": 2.7974123455122054e-16,
+      "after_std": 1.0
+    },
+    "fare": {
+      "before_mean": 32.09668087739032,
+      "before_std": 49.697504316707956,
+      "after_mean": 1.3587431392487855e-16,
+      "after_std": 1.0
+    }
+  }
+}

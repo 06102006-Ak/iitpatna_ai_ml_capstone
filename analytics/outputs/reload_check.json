@@ -1,0 +1,56 @@
+{
+  "sample_rows": [
+    {
+      "pclass": 3,
+      "age": 24.0,
+      "sibsp": 2,
+      "parch": 0,
+      "fare": 24.15,
+      "sex": "male",
+      "embarked": "S"
+    },
+    {
+      "pclass": 3,
+      "age": 44.0,
+      "sibsp": 0,
+      "parch": 1,
+      "fare": 16.1,
+      "sex": "male",
+      "embarked": "S"
+    },
+    {
+      "pclass": 3,
+      "age": 22.0,
+      "sibsp": 0,
+      "parch": 0,
+      "fare": 7.225,
+      "sex": "male",
+      "embarked": "C"
+    },
+    {
+      "pclass": 3,
+      "age": 41.0,
+      "sibsp": 2,
+      "parch": 0,
+      "fare": 14.1083,
+      "sex": "male",
+      "embarked": "S"
+    },
+    {
+      "pclass": 3,
+      "age": NaN,
+      "sibsp": 1,
+      "parch": 0,
+      "fare": 15.5,
+      "sex": "female",
+      "embarked": "Q"
+    }
+  ],
+  "predictions": [
+    0,
+    0,
+    0,
+    0,
+    1
+  ]
+}

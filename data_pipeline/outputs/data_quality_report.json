@@ -1,0 +1,17 @@
+{
+  "scrape_stats": {
+    "listing_pages_requested": 5,
+    "book_links_seen": 100,
+    "unique_books": 100,
+    "detail_requests": 20,
+    "failed_detail_requests": 80
+  },
+  "cleaning": {
+    "input_rows": 100,
+    "dropped_rows": 0,
+    "numeric_imputations": {}
+  },
+  "fixed_gbp_to_inr": 105.5,
+  "final_rows": 100,
+  "categories": 14
+}
